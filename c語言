@@ -1,0 +1,183 @@
+# %%
+try:
+    score = int(input("請輸入學生\
+                            分數(最高300分):"))
+    print(f'分數是{score}')
+except:
+    print("輸入的格式有問題!")
+
+# %%
+#下列為換算成績等級的程式碼，換算的規則如下：
+
+# 90(含)~100分為「優」
+# 80(含)~89分為「甲」
+# 70(含)~79分為「乙」
+# 60(含)~69分為「丙」
+# 0(含)~59分為「丁」
+
+score = int(input("請輸入學生分數0~100"))
+grade = ""
+
+if score >= 90:
+    grade = '優'
+else:
+    if score >= 80:
+        grade = '甲'
+    else:
+        if score >= 70:
+            grade = '乙'
+        else:
+            if score >= 60:
+                grade = '丙'
+            else:
+                grade = '丁'
+                print("第4層")
+            print("第3層")
+        print("第2層")
+    print("第1層")
+
+print(f"學生等級是:{grade}")
+
+# %%
+
+#下列為換算成績等級的程式碼，換算的規則如下：
+
+# 90(含)~100分為「優」
+# 80(含)~89分為「甲」
+# 70(含)~79分為「乙」
+# 60(含)~69分為「丙」
+# 0(含)~59分為「丁」
+
+score = int(input("請輸入學生分數0~100"))
+grade = ""
+
+#多項選擇
+if score >= 90:
+    grade = '優'
+elif score >= 80:    
+    grade = '甲'
+    print("第1層")
+elif score >= 70:         
+    grade = '乙'
+    print("第2層")
+elif score >= 60:
+    grade = '丙'
+    print("第3層")
+else:
+    grade = '丁'
+    print("第4層")
+
+print(f"學生等級是:{grade}")
+
+
+
+
+# %%
+#如果x不是負數，則傳回值為x **(1/y)。
+#如果x是負數而且為偶數，則傳回值為0。
+#如果x是負數而且為奇數，則傳回值為 -(-x)**(1/y)。
+
+try:
+    x=int(input("請輸入x的整數:"))
+except:
+    print("輸入x的格式錯誤")
+else:
+    try:
+        y=int(input("請輸入y的整數(y不可為0):"))
+        root =0
+        if x>=0:
+            root = x**(1/y)
+        elif x%2==0:
+            root=0
+        else:
+            root=-(-x)**(1/y)
+
+        print(f"root={root}")
+    except:
+        print("輸入y的格式錯誤")   
+
+
+
+
+
+
+# %%
+
+#輸入顧客購買金額，若金額在
+#100000元打8折. 
+#50000打85折. 
+#30000打9折. 
+#10000打95折. 
+
+#請輸入購買金額:130000
+#實付金額是: 104000.0 元
+import math
+
+money = int(input("請輸入購買金額:"))
+pay_money = 0
+if money < 10000:
+    pay_money = money
+elif money < 30000:
+    pay_money = money * 0.95
+elif money < 50000:
+    pay_money = money * 0.9
+elif money < 100000:
+    pay_money = money * 0.85
+else:
+    pay_money = money * 0.8
+
+#print(f"實付金額是:{pay_money:.0f}元")
+#print(f"實付金額是:{int(pay_money)}元")
+#print(f"實付金額是:{round(pay_money)}元")
+print(f"實付金額是:{math.ceil(pay_money):.1f}元")
+
+# %%
+chinese=int(input("請輸入國文分數:"))
+math=int(input("請輸入數學分數:"))
+
+if chinese==100:
+    if math==100:
+
+        print("獎金金額為:1000")
+    else:
+        print("獎金金額為:500")
+elif math==100:
+    print("獎金金額為:500")
+else:
+    print("獎金金額為:0")
+
+
+
+
+# %%
+chinese=int(input("請輸入國文分數:"))
+math=int(input("請輸入數學分數:"))
+
+if (chinese==100) and (math==100):
+    print("獎金金額為:1000")
+elif (math==100) or (chinese==100):
+    print("獎金金額為:500")
+else:
+    print("獎金金額為:0")
+
+
+
+
+
+
+# %%
+num = int(input("請輸入號碼:"))
+if num >= 351 and num <= 400:
+    print("351~400之間")
+else:
+    print("不在351~400之間")
+
+# %%
+num = int(input("請輸入號碼:"))
+if num < 351 or num > 400:
+    print("不在351~400之間")
+else:
+    print("351~400之間")
+    
+
+
